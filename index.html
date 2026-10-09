@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Julián López Gutiérrez — Marketing, contenido y dirección creativa</title>
+<meta name="description" content="Encuentro conceptos creativos y los convierto en estrategias, campañas y contenidos que responden a lo que cada marca necesita.">
+<meta name="theme-color" content="#10100f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Julián López Gutiérrez — Marketing, contenido y dirección creativa">
+<meta property="og:description" content="Encuentro conceptos creativos y los convierto en estrategias, campañas y contenidos que responden a lo que cada marca necesita.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Single committed look: paper + ink. Pages alternate between a bone "paper"
+     plate and a carbon "ink" plate; red appears only as a printed mark. */
+  :root{
+    --carbon:#10100f;
+    --bone:#e9e3d6;
+    --red:#d83a2e;
+    --grey:#77736b;
+    --focus:#d83a2e;
+    --font-display:'Archivo Black', 'Archivo', Impact, 'Arial Black', sans-serif;
+    --font-serif:'DM Serif Display', Georgia, 'Times New Roman', serif;
+    --font-body:'Archivo', ui-sans-serif, 'Segoe UI', Arial, sans-serif;
+    --font-mono:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  }
+  .plate-paper{
+    --bg:var(--bone);
+    --ink:var(--carbon);
+    --soft:#55524b;
+    --rule:var(--carbon);
+    --hair:var(--grey);
+    --focus:var(--red);
+    background:var(--bg);
+    color:var(--ink);
+  }
+  .plate-ink{
+    --bg:var(--carbon);
+    --ink:var(--bone);
+    --soft:#b8b3a6;
+    --rule:var(--bone);
+    --hair:var(--grey);
+    --focus:var(--bone);
+    background:var(--bg);
+    color:var(--ink);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  ::selection{background:var(--red); color:var(--bone);}
+  body{
+    margin:0;
+    background:var(--bone);
+    color:var(--carbon);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-weight:400;
+    text-wrap:balance;
+    margin:0;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:3px;
+  }
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding-inline:clamp(20px,5vw,64px);
+  }
+  .mono{
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    font-weight:500;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- masthead ---------- */
+  header.site{
+    position:sticky;
+    top:0;
+    z-index:20;
+    border-bottom:1px solid var(--hair);
+  }
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block:14px;
+    gap:16px;
+  }
+  .nav-mark{
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:0.95rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .nav-links{
+    display:flex;
+    gap:clamp(12px,2.5vw,28px);
+    flex-wrap:wrap;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .nav-links a{
+    text-decoration:none;
+    color:var(--soft);
+    font-family:var(--font-mono);
+    font-size:0.7rem;
+    font-weight:500;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    padding-block:4px;
+    border-bottom:3px solid transparent;
+    transition:color .15s, border-color .15s;
+  }
+  .nav-links a:hover{color:var(--ink); border-color:var(--red);}
+  @media (max-width:720px){
+    nav{flex-direction:column; align-items:flex-start; gap:8px;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding-block:clamp(32px,5vw,56px) clamp(44px,6vw,72px);}
+  .hero-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:8px 24px;
+    padding-bottom:14px;
+    margin-bottom:clamp(24px,4vw,44px);
+    border-bottom:1px solid var(--hair);
+  }
+  .hero-name{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:clamp(0.95rem,1.6vw,1.15rem);
+    letter-spacing:0.06em;
+  }
+  .hero-name::before{
+    content:"";
+    flex:none;
+    width:12px;
+    height:12px;
+    background:var(--red);
+  }
+  .hero-descriptor{color:var(--soft);}
+  .hero-title{
+    font-family:var(--font-display);
+    font-size:clamp(2.8rem,7vw,5.2rem);
+    line-height:0.94;
+    letter-spacing:-0.015em;
+    animation:rise .5s ease-out both;
+  }
+  .hero-title span{display:block;}
+  .hero-title .t-serif{
+    font-family:var(--font-serif);
+    font-style:italic;
+    font-size:0.88em;
+    line-height:1;
+    letter-spacing:-0.005em;
+    margin-top:0.08em;
+  }
+  @keyframes rise{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1.5fr) minmax(0,0.7fr);
+    gap:clamp(28px,5vw,56px);
+    align-items:end;
+    margin-top:clamp(28px,4.5vw,48px);
+  }
+  @media (max-width:820px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-portrait{max-width:260px;}
+  }
+  .hero-desc{
+    font-size:clamp(1.05rem,1.5vw,1.2rem);
+    line-height:1.55;
+    max-width:46ch;
+  }
+  .hero-cta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:clamp(22px,3vw,30px);
+  }
+  .cta-primary,
+  .cta-secondary{
+    display:inline-flex;
+    align-items:center;
+    max-width:100%;
+    min-height:56px;
+    text-decoration:none;
+    border:2px solid var(--carbon);
+    transition:background .15s, color .15s, border-color .15s;
+  }
+  .cta-primary{
+    gap:10px;
+    padding:12px 24px;
+    background:var(--red);
+    border-color:var(--red);
+    color:var(--bone);
+    font-family:var(--font-display);
+    font-size:1.2rem;
+    line-height:1.1;
+  }
+  .cta-primary:hover{background:var(--carbon); border-color:var(--carbon);}
+  .cta-secondary{
+    gap:8px;
+    padding:12px 20px;
+    color:var(--carbon);
+    font-family:var(--font-mono);
+    font-size:0.78rem;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+  }
+  .cta-secondary:hover{background:var(--carbon); color:var(--bone);}
+  .hero-meta{
+    color:var(--soft);
+    max-width:56ch;
+    margin-top:clamp(24px,3.5vw,36px);
+    padding-top:14px;
+    border-top:1px solid var(--hair);
+  }
+
+  .hero-portrait{margin:0;}
+  .hero-portrait img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:50% 40%;
+    border:2px solid var(--carbon);
+    background:var(--carbon);
+  }
+
+  /* ---------- section scaffolding ---------- */
+  section{padding-block:clamp(48px,7vw,84px); scroll-margin-top:84px;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:clamp(28px,4vw,44px);
+    border-top:3px solid var(--rule);
+    padding-top:14px;
+  }
+  .section-head .eyebrow{color:var(--soft);}
+  .section-head h2{
+    font-family:var(--font-display);
+    font-size:clamp(1.9rem,3.6vw,2.8rem);
+    line-height:1;
+    letter-spacing:-0.01em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:260px minmax(0,1fr);
+    grid-template-areas:
+      "label content"
+      "photo content";
+    align-items:start;
+    gap:20px clamp(24px,5vw,56px);
+  }
+  .about-label{grid-area:label; color:var(--soft);}
+  .about-text{grid-area:content;}
+  .about-photo{grid-area:photo; margin:0;}
+  .about-photo img{
+    display:block;
+    width:100%;
+    height:auto;
+    border:2px solid var(--rule);
+    background:var(--carbon);
+  }
+  .about-grid p{margin-bottom:1.1em; max-width:62ch;}
+  .about-grid p:first-child{
+    font-family:var(--font-serif);
+    font-size:clamp(1.4rem,2.6vw,1.9rem);
+    line-height:1.25;
+    max-width:22em;
+    margin-bottom:1.1em;
+  }
+  .about-grid p strong{font-weight:700;}
+  .about-grid p:last-child{margin-bottom:0;}
+  @media (max-width:700px){
+    .about-grid{
+      grid-template-columns:1fr;
+      grid-template-areas:
+        "label"
+        "content"
+        "photo";
+    }
+    .about-photo{max-width:300px;}
+  }
+
+  /* ---------- services : numbered index ---------- */
+  .service-list{border-top:1px solid var(--hair);}
+  .service-row{
+    display:grid;
+    grid-template-columns:clamp(72px,10vw,120px) 1fr;
+    gap:clamp(16px,3vw,32px);
+    padding-block:clamp(20px,2.8vw,30px);
+    border-bottom:1px solid var(--hair);
+    align-items:start;
+  }
+  .service-row .idx{
+    font-family:var(--font-display);
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1;
+    color:var(--red);
+    font-variant-numeric:tabular-nums;
+  }
+  .service-row h3{
+    font-family:var(--font-display);
+    font-size:clamp(1.15rem,2vw,1.5rem);
+    line-height:1.15;
+  }
+  .service-row p{color:var(--soft); font-size:0.98rem; margin-top:8px; max-width:60ch;}
+  @media (max-width:560px){
+    .service-row{grid-template-columns:1fr; gap:8px;}
+  }
+
+  /* ---------- projects (the reel) ---------- */
+  .reel{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:clamp(20px,2.6vw,28px);
+  }
+  .frame{
+    border:2px solid var(--rule);
+    display:flex;
+    flex-direction:column;
+    transition:border-color .15s ease;
+  }
+  .frame:hover{border-color:var(--red);}
+  .frame-art{
+    display:block;
+    aspect-ratio:1/1;
+    background:var(--carbon);
+    border-bottom:2px solid var(--rule);
+    text-decoration:none;
+    position:relative;
+    overflow:hidden;
+  }
+  .frame-art img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .frame-art .open-hint{
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:6px 10px;
+    background:var(--bone);
+    color:var(--carbon);
+    border-top:2px solid var(--carbon);
+    border-left:2px solid var(--carbon);
+    opacity:0;
+    transition:opacity .15s ease;
+  }
+  .frame-art:hover .open-hint,
+  .frame-art:focus-visible .open-hint{opacity:1;}
+  .frame.featured{
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:minmax(0,0.9fr) minmax(0,1.3fr);
+    border-color:var(--carbon);
+  }
+  .frame.featured:hover{border-color:var(--red);}
+  .frame.featured .frame-art{
+    aspect-ratio:auto;
+    min-height:420px;
+    background:#000;
+    border-bottom:none;
+    border-right:1px solid var(--hair);
+  }
+  .frame.featured .frame-art img{object-fit:contain;}
+  .frame-body{
+    padding:clamp(18px,2.4vw,24px);
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .frame-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .frame:not(.featured) .frame-meta{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .frame-meta > .mono{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+  }
+  .frame-meta > .mono::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:var(--red);
+  }
+  .tag{
+    background:var(--red);
+    color:var(--carbon);
+    font-family:var(--font-mono);
+    font-size:0.66rem;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:4px 9px;
+  }
+  .frame h3{
+    font-family:var(--font-serif);
+    font-size:clamp(1.6rem,2.4vw,2rem);
+    line-height:1.05;
+  }
+  .frame-body p{color:var(--soft); font-size:0.97rem;}
+  .frame .format{
+    color:var(--soft);
+    font-family:var(--font-mono);
+    font-size:0.66rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  .frame .visit{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    color:var(--ink);
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    text-decoration:none;
+    border-bottom:2px solid var(--red);
+    width:fit-content;
+    transition:border-color .15s;
+  }
+  .frame .visit:hover{border-color:var(--ink);}
+  .metric{
+    margin-top:auto;
+    padding-top:12px;
+    border-top:1px solid var(--hair);
+    font-family:var(--font-mono);
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .reel-label{
+    grid-column:1 / -1;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:clamp(12px,3vw,32px);
+    padding-top:14px;
+    border-top:3px solid var(--rule);
+    color:var(--soft);
+  }
+  .reel-label::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:var(--red);
+  }
+  .frame.featured .frame-body{
+    padding:clamp(22px,3.4vw,40px);
+    gap:18px;
+  }
+  .frame.featured h3{
+    font-size:clamp(2.6rem,5.4vw,4.4rem);
+    line-height:0.95;
+  }
+  .frame-body .main-lead{
+    color:var(--ink);
+    font-family:var(--font-serif);
+    font-size:clamp(1.3rem,2vw,1.6rem);
+    line-height:1.25;
+    max-width:30em;
+  }
+  .main-lists{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px 28px;
+  }
+  .list-label{
+    margin:0 0 12px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--hair);
+    color:var(--soft);
+    font-weight:600;
+  }
+  .main-list ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .main-list li{
+    position:relative;
+    padding-left:18px;
+    font-size:0.95rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .main-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.5em;
+    width:8px;
+    height:8px;
+    background:var(--ink);
+  }
+  .main-list .list-red li::before{background:var(--red);}
+  @media (max-width:960px){
+    .reel{grid-template-columns:1fr;}
+    .frame{display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1.3fr);}
+    .frame-art{aspect-ratio:auto; min-height:300px; border-bottom:none; border-right:2px solid var(--rule);}
+    .frame.featured{grid-template-columns:1fr;}
+    .frame.featured .frame-art{aspect-ratio:4/3; min-height:0; border-right:none; border-bottom:1px solid var(--hair);}
+  }
+  @media (max-width:560px){
+    .frame{display:flex; flex-direction:column;}
+    .frame-art{aspect-ratio:1/1; min-height:0; border-right:none; border-bottom:2px solid var(--rule);}
+    .frame.featured{display:flex;}
+    .frame.featured .frame-art{aspect-ratio:4/5;}
+  }
+
+  /* ---------- beyond the projects (community) ---------- */
+  .beyond-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+    grid-template-areas:
+      "intro photob"
+      "photoa photob"
+      "exp exp";
+    gap:clamp(24px,3.4vw,36px) clamp(24px,4vw,40px);
+  }
+  .beyond-intro{
+    grid-area:intro;
+    font-family:var(--font-serif);
+    font-size:clamp(1.8rem,3.6vw,2.8rem);
+    line-height:1.05;
+    max-width:16em;
+  }
+  .beyond-photo-a{grid-area:photoa;}
+  .beyond-photo-b{grid-area:photob; align-self:start;}
+  .beyond-grid figure{margin:0;}
+  .beyond-grid img{
+    display:block;
+    width:100%;
+    height:auto;
+    border:2px solid var(--rule);
+    background:var(--carbon);
+  }
+  .beyond-exp{
+    grid-area:exp;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px clamp(24px,4vw,40px);
+    padding-top:20px;
+    border-top:1px solid var(--hair);
+  }
+  .beyond-exp h3{
+    font-family:var(--font-serif);
+    font-size:clamp(1.6rem,2.4vw,2rem);
+    line-height:1.05;
+    margin:12px 0 10px;
+  }
+  .beyond-cta{margin-top:clamp(24px,3.4vw,36px);}
+  .beyond-exp .exp-text{
+    color:var(--soft);
+    font-size:1rem;
+    max-width:46ch;
+  }
+  @media (max-width:820px){
+    .beyond-grid{
+      grid-template-columns:1fr;
+      grid-template-areas:
+        "intro"
+        "photoa"
+        "photob"
+        "exp";
+    }
+  }
+  @media (max-width:560px){
+    .beyond-exp{grid-template-columns:1fr;}
+  }
+
+  /* ---------- contact ---------- */
+  .contact .wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+  }
+  .kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--soft);
+  }
+  .kicker::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:var(--red);
+  }
+  .contact h2{
+    font-family:var(--font-display);
+    font-size:clamp(2rem,5.4vw,4rem);
+    line-height:0.98;
+    letter-spacing:-0.01em;
+    text-transform:uppercase;
+    max-width:16ch;
+  }
+  .contact h2 em{
+    font-family:var(--font-serif);
+    font-style:italic;
+    text-transform:none;
+    letter-spacing:0;
+    font-size:1.08em;
+    color:var(--red);
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    max-width:100%;
+    overflow-wrap:anywhere;
+    background:var(--bone);
+    color:var(--carbon);
+    border:2px solid var(--bone);
+    font-family:var(--font-mono);
+    font-size:0.82rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:14px 20px;
+    transition:background .15s, color .15s, border-color .15s;
+  }
+  .btn::before{
+    content:"";
+    flex:none;
+    width:10px;
+    height:10px;
+    background:var(--red);
+  }
+  .btn:hover{background:var(--red); border-color:var(--red); color:var(--carbon);}
+  .btn:hover::before{background:var(--carbon);}
+  .contact-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    max-width:100%;
+  }
+  .btn-ghost{
+    background:transparent;
+    color:var(--bone);
+  }
+  .btn-ghost::before{display:none;}
+  .btn.btn-ghost:hover{background:var(--bone); border-color:var(--bone); color:var(--carbon);}
+
+  footer{
+    padding-block:22px;
+    border-top:1px solid var(--hair);
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-family:var(--font-mono);
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="site plate-ink">
+  <nav class="wrap">
+    <span class="nav-mark">J. López Gutiérrez</span>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero plate-paper" id="inicio">
+    <div class="wrap">
+      <div class="hero-top">
+        <p class="hero-name">JULIÁN LÓPEZ GUTIÉRREZ</p>
+        <p class="hero-descriptor mono">MARKETING · CONTENIDO · DIRECCIÓN CREATIVA</p>
+      </div>
+
+      <h1 class="hero-title"><span>Ideas que conectan.</span> <span class="t-serif">Contenido que mueve marcas.</span></h1>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-desc">Encuentro conceptos creativos y los convierto en estrategias, campañas y contenidos que responden a lo que cada marca necesita.</p>
+          <div class="hero-cta">
+            <a class="cta-primary" href="#contacto">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a>
+            <a class="cta-secondary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="hero-meta mono">BOGOTÁ, COLOMBIA · DISPONIBLE PARA PROYECTOS Y COLABORACIONES</p>
+        </div>
+
+        <figure class="hero-portrait">
+          <img src="img/julian-principal.jpg" alt="Julián López Gutiérrez en un espacio de trabajo creativo, mirando su teléfono junto a una mesa con cuadernos y marcadores">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="plate-paper" id="sobre-mi">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Sobre mí</h2>
+        <span class="mono eyebrow">Perfil</span>
+      </div>
+      <div class="about-grid">
+        <div class="mono about-label">MARKETING · CONTENIDO · DIRECCIÓN CREATIVA</div>
+        <div class="about-text">
+          <p>Trabajo en marketing, comunicación y creación de contenido, encontrando conceptos e ideas que conecten lo que una marca ofrece con la forma en que las personas lo viven.</p>
+          <p>Esa visión tomó forma en <strong>LeCreative</strong>, una casa creativa que cofundé para desarrollar experiencias digitales y físicas desde una perspectiva disruptiva: crear desde lo que nos gusta, mostrar lo que otros omiten y explorar formas de comunicar que no dependan de los likes ni de la viralidad.</p>
+          <p>Desde LeCreative hemos trabajado en proyectos comerciales, políticos y culturales, incluyendo contenido sobre Villa de Leyva contado desde la mirada local. Experiencias que me han permitido explorar distintas audiencias, contextos y formatos, llevando las ideas desde el concepto hasta su ejecución.</p>
+        </div>
+        <figure class="about-photo">
+          <img src="img/julian-retrato.jpg" width="1500" height="2000" alt="Retrato de Julián López Gutiérrez al aire libre, con montañas y cielo azul al fondo, sosteniendo un teléfono" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="plate-ink" id="servicios">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Servicios</h2>
+        <span class="mono eyebrow">Pilares de trabajo</span>
+      </div>
+      <div class="service-list">
+        <div class="service-row">
+          <span class="idx">01</span>
+          <div>
+            <h3>Estrategia de contenido</h3>
+            <p>Definición de objetivos, audiencias, pilares y líneas de comunicación.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">02</span>
+          <div>
+            <h3>Concepto y dirección creativa</h3>
+            <p>Desarrollo de ideas, conceptos visuales y narrativas para campañas y contenidos.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">03</span>
+          <div>
+            <h3>Creación de contenido</h3>
+            <p>Planeación y desarrollo de piezas audiovisuales, fotografía, video y contenido para redes.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">04</span>
+          <div>
+            <h3>Social Media</h3>
+            <p>Planeación de contenido, comunicación de marca y campañas para Instagram, TikTok, Facebook y LinkedIn.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">05</span>
+          <div>
+            <h3>Copywriting</h3>
+            <p>Conceptualización y escritura de captions, campañas, guiones y mensajes de marca.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">06</span>
+          <div>
+            <h3>UGC y contenido de producto</h3>
+            <p>Piezas pensadas para mostrar productos de manera natural, atractiva y orientada a conversión.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plate-paper" id="proyectos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Proyectos</h2>
+        <span class="mono eyebrow">Casa creativa</span>
+      </div>
+      <div class="reel">
+        <article class="frame featured plate-ink">
+          <a class="frame-art" href="https://www.instagram.com/lecreative__/" target="_blank" rel="noopener noreferrer" aria-label="Ver Instagram de LeCreative">
+            <img src="img/lecreative.jpg" alt="Logo de LeCreative en blanco y negro: Worldwide Historics Experiences" loading="lazy">
+            <span class="mono open-hint">Instagram →</span>
+          </a>
+          <div class="frame-body">
+            <div class="frame-meta">
+              <span class="mono">Proyecto principal</span>
+              <span class="tag">Casa creativa · Multi-sector</span>
+            </div>
+            <h3>LeCreative</h3>
+            <p class="main-lead">LeCreative es una casa creativa que cofundé para explorar formas distintas de comunicar y crear experiencias digitales y físicas para marcas, desde el desarrollo de conceptos hasta la estrategia y la dirección creativa.</p>
+            <div class="main-lists">
+              <div class="main-list">
+                <h4 class="mono list-label">Filosofía</h4>
+                <ul class="list-red">
+                  <li>Crear desde lo que nos gusta.</li>
+                  <li>Mostrar lo que otros omiten.</li>
+                  <li>Explorar formas de comunicar que no dependan de los likes ni de la viralidad.</li>
+                </ul>
+              </div>
+              <div class="main-list">
+                <h4 class="mono list-label">Trabajos</h4>
+                <ul>
+                  <li>Proyectos comerciales, políticos y culturales.</li>
+                  <li>Contenido sobre Villa de Leyva contado desde la mirada local.</li>
+                  <li>UGC y contenido corporativo para hotelería y entretenimiento.</li>
+                </ul>
+              </div>
+            </div>
+            <span class="format">Formato — Video · UGC · Corporativo</span>
+            <a class="visit" href="https://www.instagram.com/lecreative__/" target="_blank" rel="noopener noreferrer">Ver Instagram →</a>
+            <div class="metric">~10.000 reproducciones promedio por video</div>
+          </div>
+        </article>
+
+        <p class="reel-label mono">Casos individuales</p>
+
+        <article class="frame">
+          <a class="frame-art" href="https://www.acg.com.co/" target="_blank" rel="noopener noreferrer" aria-label="Ver sitio web de ACG Colombiana">
+            <img src="img/acg.jpg" alt="Equipo de ACG Colombiana posando frente a su stand en un evento de la industria" style="object-position:50% 40%" loading="lazy">
+            <span class="mono open-hint">Sitio web →</span>
+          </a>
+          <div class="frame-body">
+            <div class="frame-meta">
+              <span class="mono">Take 01</span>
+              <span class="tag">Industria química · B2B</span>
+            </div>
+            <h3>ACG Colombiana</h3>
+            <p>Estrategia y creación de contenidos para una empresa de representación e importación de materias primas para la industria: comunicación de marca, contenido para LinkedIn y sitio web, cobertura de eventos, análisis de competidores y tendencias, y documentación de oportunidades comerciales.</p>
+            <span class="format">Formato — LinkedIn · Website</span>
+            <a class="visit" href="https://www.acg.com.co/" target="_blank" rel="noopener noreferrer">Ver sitio web →</a>
+          </div>
+        </article>
+
+        <article class="frame">
+          <a class="frame-art" href="https://www.instagram.com/cosmodent_oficial/" target="_blank" rel="noopener noreferrer" aria-label="Ver Instagram de Cosmodent">
+            <img src="img/cosmodent.png" alt="Caja del kit de blanqueamiento dental Cosmodent Brilliance Pro con sobres de tiras abiertos en abanico" style="object-position:50% 35%" loading="lazy">
+            <span class="mono open-hint">Instagram →</span>
+          </a>
+          <div class="frame-body">
+            <div class="frame-meta">
+              <span class="mono">Take 02</span>
+              <span class="tag">Cuidado oral · B2C</span>
+            </div>
+            <h3>Cosmodent</h3>
+            <p>Conceptos y contenidos para una marca de blanqueamiento dental, desde la comunicación de producto hasta campañas promocionales. Dirección conceptual, copywriting, piezas gráficas y video para redes y pauta digital.</p>
+            <span class="format">Formato — Redes sociales · Pauta digital</span>
+            <a class="visit" href="https://www.instagram.com/cosmodent_oficial/" target="_blank" rel="noopener noreferrer">Ver Instagram →</a>
+          </div>
+        </article>
+
+        <article class="frame">
+          <a class="frame-art" href="https://www.instagram.com/tango.lubricante/" target="_blank" rel="noopener noreferrer" aria-label="Ver Instagram de TangoLube">
+            <img src="img/tango.jpg" alt="Envase de lubricante íntimo Tango Premium sobre una piedra mojada rodeado de pétalos de rosa roja" style="object-position:50% 40%" loading="lazy">
+            <span class="mono open-hint">Instagram →</span>
+          </a>
+          <div class="frame-body">
+            <div class="frame-meta">
+              <span class="mono">Take 03</span>
+              <span class="tag">Bienestar · B2C</span>
+            </div>
+            <h3>TangoLube</h3>
+            <p>Construcción de conceptos y comunicación para una marca de lubricantes íntimos: campañas de producto y contenido para redes, comunicando desde la conexión, el disfrute y una identidad de marca cercana.</p>
+            <span class="format">Formato — Redes sociales</span>
+            <a class="visit" href="https://www.instagram.com/tango.lubricante/" target="_blank" rel="noopener noreferrer">Ver Instagram →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="plate-paper" id="comunidad">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>MÁS ALLÁ DE LOS PROYECTOS</h2>
+        <span class="mono eyebrow">Casa Manglar</span>
+      </div>
+      <div class="beyond-grid">
+        <p class="beyond-intro">Las ideas también se construyen en colectivo.</p>
+
+        <figure class="beyond-photo-a">
+          <img src="img/manglar-comunidad.jpg" width="1170" height="762" alt="Retrato grupal de la comunidad de Casa Manglar, reunida sobre un sofá, riendo y gesticulando hacia la cámara" loading="lazy">
+        </figure>
+
+        <figure class="beyond-photo-b">
+          <img src="img/manglar-produccion.jpg" width="1170" height="1369" alt="Dos integrantes del equipo durante una producción, junto a una mesa con piezas impresas y una luz intensa al fondo" loading="lazy">
+        </figure>
+
+        <div class="beyond-exp">
+          <article>
+            <p class="mono kicker">Experiencia 01</p>
+            <h3>Comunidad Casa Manglar</h3>
+            <p class="exp-text">He participado en voluntariados y en la gestión de producciones junto a la comunidad de Casa Manglar, una agencia de marketing de Bogotá.</p>
+          </article>
+          <article>
+            <p class="mono kicker">Experiencia 02</p>
+            <h3>Exploración creativa</h3>
+            <p class="exp-text">Participación en un taller de dirección de arte impartido por Sarah Marin y en un comité editorial enfocado en la creación de guiones.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="beyond-cta">
+        <a class="cta-secondary" href="https://www.instagram.com/casa.manglar/?hl=es" target="_blank" rel="noopener noreferrer">Instagram de Casa Manglar <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact plate-ink" id="contacto">
+    <div class="wrap">
+      <span class="mono kicker">Contacto</span>
+      <h2>¿Tienes un proyecto en mente? <em>Hablemos.</em></h2>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:lopezgutierrezjulian27@gmail.com">Escríbeme — lopezgutierrezjulian27@gmail.com</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/julian_lopezzz_/" target="_blank" rel="noopener noreferrer">Instagram @julian_lopezzz_ ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="plate-ink">
+  <div class="wrap">
+    <span>Julián López Gutiérrez</span>
+    <span>Marketing · Contenido · Dirección creativa</span>
+  </div>
+</footer>
+</body>
+</html>
